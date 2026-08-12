@@ -1,6 +1,15 @@
-backgroud: #ref6709e2015
-  img = ID: banner.jpeg
-text align: #D3D3D3
+/* Configura o fundo cinza claro e o texto centralizado na página */
+body {
+    background: #CCCCCC;
+    text-align: center;
+}
 
- banner 
-width = 100%;
+/* Ajusta o banner para ocupar 100% da largura da tela */
+#banner {
+    width: 100%;
+}
+
+/* Destaca o texto da missão se quiser deixá-lo um pouco maior */
+#missao {
+    font-size: 20px;
+}
