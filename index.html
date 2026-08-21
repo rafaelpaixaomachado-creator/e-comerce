@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+
+!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <nav>
-            <!-- O menu de navegação entrará aqui no futuro -->
-        </nav>
-        <!-- IMPORTANTE: Verifique se o nome da imagem é exatamente banner(1).jpg -->
-        <img id="banner" src="banner(1).jpg" alt="Foto de uma barbearia com poltronas e espelho">
+        <div class="caixa">
+            <img src="logo.png" alt="Logo da Barbearia Alura" class="logo-topo">
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
-    <main class="principal">
-        <h1>Sobre a Barbearia Alura</h1>
+    <main class="caixa">
+        <section class="conteudo-principal">
+            <h2>Bem-vindo ao nosso site</h2>
+            <p class="texto-destaque">Este é um texto em destaque com tamanho menor e negrito.</p>
+            <p>Aqui você pode incluir o restante do conteúdo da sua página.</p>
+        </section>
         
-        <p>Localizada no coração da cidade, a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
-        
-        <p id="missao">Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</p>
-        
-        <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
-
-        <!-- IMPORTANTE: Verifique se o nome da imagem é exatamente beneficios.jpg -->
-        <img id="beneficios" src="beneficios.jpg" alt="Foto de uma barbearia com um homem fazendo a barba">
+        <section class="imagens-projeto">
+            <div class="imagem-item">
+                <img src="beneficios.jpg" alt="Foto de uma barbearia com poltronas e espelho">
+            </div>
+            <div class="imagem-item">
+                <img src="utensilios.jpg" alt="Foto de uma barbearia com um homem fazendo a barba">
+                <!-- Frases corrigidas e organizadas em uma lista real -->
+                <ul class="lista-servicos">
+                    <li><strong>Descrição:</strong> Serviços de alta qualidade</li>
+                    <li><strong>Cabelo:</strong> R$ 30,00</li>
+                    <li><strong>Barba:</strong> R$ 25,00</li>
+                    <li><strong>Cabelo + Barba:</strong> R$ 50,00</li>
+                </ul>
+            </div>
+        </section>
     </main>
-
 </body>
 </html>
+
 
