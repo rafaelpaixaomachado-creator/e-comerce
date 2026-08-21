@@ -1,29 +1,25 @@
-header{
- backgroud 
-
+header { 
+    background: #000000; /* Substitua pelo código da cor desejada */
 } 
-display: ; inline;
- margin: 0 0 0 15px;
-hav{
- text-transform: uppercase;
- color:black;
-}
-{ 
-  position-absolut
-  top: 110px;
-   
-}
-{
-   font-size: 12px;
-  font-optical-sizing:bold;
-  fePointLight::cue;
 
-  
+nav { 
+    display: inline; 
+    margin: 0 0 0 15px; 
+    text-transform: uppercase; 
+    color: black; 
+} 
 
-}
-.caixa{
-  
-position: relative;
-width: 940;
+.menu-principal { /* Nome de classe sugerido para o seletor que estava vazio */
+    position: absolute; 
+    top: 110px; 
+} 
 
+.texto-destaque { /* Nome de classe sugerido para o seletor que estava vazio */
+    font-size: 12px; 
+    font-weight: bold; /* Corrigido de font-optical-sizing para font-weight */
+} 
+
+.caixa { 
+    position: relative; 
+    width: 940px; /* Adicionada a unidade 'px' que estava faltando */
 }
