@@ -1,25 +1,48 @@
 header { 
-    background: #000000; /* Substitua pelo código da cor desejada */
-} 
-
-nav { 
-    display: inline; 
-    margin: 0 0 0 15px; 
-    text-transform: uppercase; 
-    color: black; 
-} 
-
-.menu-principal { /* Nome de classe sugerido para o seletor que estava vazio */
-    position: absolute; 
-    top: 110px; 
-} 
-
-.texto-destaque { /* Nome de classe sugerido para o seletor que estava vazio */
-    font-size: 12px; 
-    font-weight: bold; /* Corrigido de font-optical-sizing para font-weight */
+    background: #000000; 
+    padding: 20px 0; /* Adiciona um espaço interno em cima e embaixo do logo */
 } 
 
 .caixa { 
     position: relative; 
-    width: 940px; /* Adicionada a unidade 'px' que estava faltando */
+    width: 940px; 
+    margin: 0 auto; /* Centraliza a caixa na tela do navegador */
 }
+
+/* Estilização do Menu de Navegação */
+.menu-principal { 
+    position: absolute; 
+    top: 55px; /* Ajustado para alinhar verticalmente com o centro do logo */
+    right: 0;  /* Joga o menu totalmente para o lado direito da caixa */
+} 
+
+.menu-principal ul {
+    list-style: none; /* Remove as bolinhas padrões da lista */
+    padding: 0;
+    margin: 0;
+}
+
+.menu-principal li { 
+    display: inline; 
+    margin-left: 30px; /* Cria um espaçamento horizontal entre os links */
+} 
+
+.menu-principal a { 
+    text-transform: uppercase; 
+    color: #FFFFFF; /* Cor alterada para branco para dar contraste com o fundo preto */
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+} 
+
+/* Efeito ao passar o mouse nos links do menu */
+.menu-principal a:hover {
+    color: #C78C19; /* Altera para uma cor dourada/barbearia clássica ao passar o mouse */
+    text-decoration: underline;
+}
+
+/* Estilização do Conteúdo */
+.texto-destaque { 
+    font-size: 12px; 
+    font-weight: bold; 
+} 
