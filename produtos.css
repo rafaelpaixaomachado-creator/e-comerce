@@ -1,119 +1,92 @@
-header { 
-    background: #000000; 
-    padding: 20px 0; /* Adiciona um espaço interno em cima e embaixo do logo */
-} 
-
-.caixa { 
-    position: relative; 
-    width: 940px; 
-    margin: 0 auto; /* Centraliza a caixa na tela do navegador */
-}
-
-/* Estilização do Menu de Navegação */
-.menu-principal { 
-    position: absolute; 
-    top: 55px; /* Ajustado para alinhar verticalmente com o centro do logo */
-    right: 0;  /* Joga o menu totalmente para o lado direito da caixa */
-} 
-
-.menu-principal ul {
-    list-style: none; /* Remove as bolinhas padrões da lista */
-    padding: 0;
-    margin: 0;
-}
-
-.menu-principal li { 
-    display: inline; 
-    margin-left: 30px; /* Cria um espaçamento horizontal entre os links */
-} 
-
-.menu-principal a { 
-    text-transform: uppercase; 
-    color: #FFFFFF; /* Cor alterada para branco para dar contraste com o fundo preto */
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-} 
-
-/* Efeito ao passar o mouse nos links do menu */
-.menu-principal a:hover {
-    color: #C78C19; /* Altera para uma cor dourada/barbearia clássica ao passar o mouse */
-    text-decoration: underline;
-}
-
-/* Estilização do Conteúdo */
-.texto-destaque { 
-    font-size: 12px; 
-    font-weight: bold; 
-} 
 /* Configurações Globais */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-/* Cabeçalho */
-header { 
-    background: #000000; 
-    padding: 20px 0; 
+/* Estrutura Centralizada */
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
 }
 
-.caixa { 
-    position: relative; 
-    width: 940px; 
-    margin: 0 auto; 
+/* Cabeçalho */
+header {
+    background: #000000;
+    padding: 20px 0;
+}
+
+.logo-topo {
+    /* Adicione regras para o tamanho do logo se necessário */
+    max-height: 80px;
 }
 
 /* Menu de Navegação */
-.menu-principal { 
-    position: absolute; 
-    top: 55px; 
-    right: 0; 
+.menu-principal {
+    position: absolute;
+    top: 55px;
+    right: 0;
 }
 
-.menu-principal ul { 
-    list-style: none; 
-    padding: 0; 
-    margin: 0; 
+.menu-principal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.menu-principal li { 
-    display: inline; 
-    margin-left: 30px; 
+.menu-principal li {
+    display: inline;
+    margin-left: 30px;
 }
 
-.menu-principal a { 
-    text-transform: uppercase; 
-    color: #FFFFFF; 
-    font-weight: bold; 
-    font-size: 18px; 
-    text-decoration: none; 
+.menu-principal a {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
 }
 
-.menu-principal a:hover { 
-    color: #C78C19; 
-    text-decoration: underline; 
+.menu-principal a:hover {
+    color: #C78C19;
+    text-decoration: underline;
 }
 
-/* Conteúdo e Texto */
+/* Conteúdo Principal */
 .conteudo-principal {
     padding: 40px 0;
 }
 
-.texto-destaque { 
-    font-size: 12px; 
-    font-weight: bold; 
+.texto-destaque {
+    font-size: 12px;
+    font-weight: bold;
 }
 
-/* Organização das Imagens */
+/* Organização das Imagens e Lado a Lado */
 .imagens-projeto {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     margin-top: 30px;
+}
+
+.imagem-item {
+    width: 48%;
 }
 
 .imagem-item img {
     width: 100%;
-    max-width: 450px;
     height: auto;
+}
+
+/* Lista de Serviços */
+.lista-servicos {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.lista-servicos li {
+    margin-bottom: 8px;
+    font-size: 16px;
 }
