@@ -1,0 +1,66 @@
+/* Configurações Gerais do Site */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #CCCCCC;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+
+/* Ajuste do Banner Principal */
+#banner {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover; /* Garante que a imagem não fique distorcida */
+    display: block;
+}
+
+/* Container Principal do Conteúdo */
+.principal {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza os textos e a imagem interna */
+    border-radius: 8px;
+    margin-top: -20px; /* Faz o conteúdo sobrepor levemente o banner */
+    position: relative;
+}
+
+/* Estilização dos Títulos */
+h1 {
+    font-size: 2em;
+    color: #000000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Estilização dos Parágrafos */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #444444;
+}
+
+/* Destaque para o parágrafo da Missão */
+#missao {
+    font-size: 1.3em;
+    font-style: italic;
+    background: #FEFEFE;
+    padding: 15px;
+    border-left: 5px solid #C78C19; /* Barra dourada na lateral */
+    margin: 30px 0;
+}
+
+/* Ajuste da Imagem de Benefícios */
+#beneficios {
+    width: 100%;
+    max-width: 600px; /* Limita o tamanho máximo para não cobrir a tela toda */
+    height: auto;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
