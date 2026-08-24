@@ -90,29 +90,25 @@ header {
     margin-bottom: 8px;
     font-size: 16px;
 }
-
-.produtos li{
-widtd: 30%;
-vertical-align: top;
-border-radius: 10px;
-
+/* Configuração do fundo preto do site */
+body {
+    background: #000000;
 }
-.produtos li:active { 
 
-border-color: #C78C19;
+/* Estilização do rodapé branco */
+footer {
+    background: #FFFFFF;
+    padding: 40px 0;
+    text-align: center;
+}
 
+.logo-rodape {
+    max-width: 150px;
+    margin-bottom: 20px;
 }
-.produtos li:active { 
-border-color: aquamarine;
-}
-.produtos li: houver; h2 {
-    font-size: 34px;
 
-}
-.produtos-preco{ 
-font-size: 22px;
-font-weight: bold;
-}
-.produtos-descricao{
-font-size: 18px;
+.copyright {
+    color: #000000;
+    font-size: 13px;
+    margin-top: 20px;
 }
