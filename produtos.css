@@ -90,3 +90,21 @@ header {
     margin-bottom: 8px;
     font-size: 16px;
 }
+
+.produtos li{
+widtd: 30%;
+vertical-align: top;
+border-radius: 10px;
+
+}
+.produtos li:active { 
+
+border-color: #C78C19;
+
+}
+.produtos li:active { 
+border-color: aquamarine;
+}
+.produtos li: houver; h2 {
+    
+}
