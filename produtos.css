@@ -106,5 +106,13 @@ border-color: #C78C19;
 border-color: aquamarine;
 }
 .produtos li: houver; h2 {
-    
+    font-size: 34px;
+
+}
+.produtos-preco{ 
+font-size: 22px;
+font-weight: bold;
+}
+.produtos-descricao{
+font-size: 18px;
 }
