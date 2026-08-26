@@ -1,47 +1,5 @@
 /* ==========================================================================
-   1. CONFIGURAÇÕES GERAIS E RESETS
-   ========================================================================== */
-:root {
-    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-    --card-bg: rgba(30, 41, 59, 0.7);
-    --border-color: rgba(255, 255, 255, 0.1);
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    
-    /* Cores de Destaque */
-    --accent-primary: #6366f1; /* Indigo */
-    --accent-secondary: #3b82f6; /* Blue */
-    --accent-glow: rgba(99, 102, 241, 0.15);
-    
-    /* Cores das Opções de Contato */
-    --color-phone: #38bdf8;
-    --color-whatsapp: #22c55e;
-    
-    /* Animações */
-    --transition-fast: 0.2s ease;
-    --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--bg-gradient);
-    color: var(--text-main);
-    padding: 20px;
-    overflow-x: hidden;
-}
-
-/* ==========================================================================
-   2. CONTAINER PRINCIPAL (CARD)
+   2. CONTAINER PRINCIPAL (CARD ALTERADO PARA CENTRALIZAR)
    ========================================================================== */
 #contatos {
     width: 100%;
@@ -54,34 +12,37 @@ body {
     padding: 40px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
     position: relative;
 }
 
-/* Detalhe estético de brilho no topo do card */
-#contatos::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+/* Nova classe que centraliza todo o conteúdo do formulário verticalmente */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente todos os filhos */
+    gap: 28px;
+    width: 100%;
 }
 
 /* ==========================================================================
    3. ELEMENTOS DE TEXTO E CAMPO DE MENSAGEM
    ========================================================================== */
+.campo-grupo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o texto "Mensagem" acima da caixa */
+    gap: 12px;
+}
+
 label[for="mensagem"] {
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: var(--text-muted);
-    margin-bottom: -16px; /* Aproxima do textarea */
     display: block;
+    text-align: center; /* Garante que o texto fique centralizado */
 }
 
 #mensagem {
@@ -112,146 +73,11 @@ label[for="mensagem"] {
 /* ==========================================================================
    4. SELEÇÃO DE CONTATO (RADIO BUTTONS CUSTOMIZADOS)
    ========================================================================== */
-#contatos > div {
+.opcoes-contato {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     margin-top: 4px;
+    width: 100%; /* Ocupa a largura total do container pai */
 }
 
-/* Estilização do container da label que envolve o radio */
-#contatos div label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 2px solid var(--border-color);
-    border-radius: 14px;
-    padding: 16px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1rem;
-    color: var(--text-muted);
-    transition: all var(--transition-smooth);
-    user-select: none;
-}
-
-/* Esconde o círculo padrão do rádio, mantendo acessível */
-#contatos div input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--text-muted);
-    border-radius: 50%;
-    outline: none;
-    background: transparent;
-    display: grid;
-    place-content: center;
-    transition: all var(--transition-fast);
-}
-
-/* Elemento interno do radio customizado (o ponto central) */
-#contatos div input[type="radio"]::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    transform: scale(0);
-    transition: transform var(--transition-fast);
-    background-color: currentcolor;
-}
-
-#contatos div input[type="radio"]:checked::before {
-    transform: scale(1);
-}
-
-/* --- Estados Específicos para Opção TELEFONE --- */
-#contatos div label[for="radio-telefone"]:hover {
-    border-color: rgba(56, 189, 248, 0.4);
-    background: rgba(56, 189, 248, 0.05);
-    color: var(--text-main);
-}
-
-#contatos div label[for="radio-telefone"]:has(input:checked) {
-    border-color: var(--color-phone);
-    background: rgba(56, 189, 248, 0.1);
-    color: var(--color-phone);
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
-}
-
-#contatos div label[for="radio-telefone"] input:checked {
-    border-color: var(--color-phone);
-    color: var(--color-phone);
-}
-
-/* --- Estados Específicos para Opção WHATSAPP --- */
-#contatos div label[for="radio-whatsapp"]:hover {
-    border-color: rgba(34, 197, 94, 0.4);
-    background: rgba(34, 197, 94, 0.05);
-    color: var(--text-main);
-}
-
-#contatos div label[for="radio-whatsapp"]:has(input:checked) {
-    border-color: var(--color-whatsapp);
-    background: rgba(34, 197, 94, 0.1);
-    color: var(--color-whatsapp);
-    box-shadow: 0 0 15px rgba(34, 197, 94, 0.15);
-}
-
-#contatos div label[for="radio-whatsapp"] input:checked {
-    border-color: var(--color-whatsapp);
-    color: var(--color-whatsapp);
-}
-
-/* ==========================================================================
-   5. BOTÃO DE ENVIO (SUBMIT)
-   ========================================================================== */
-input[type="submit"] {
-    width: 100%;
-    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-    border: none;
-    border-radius: 12px;
-    padding: 16px;
-    color: white;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    transition: all var(--transition-fast);
-    margin-top: 10px;
-}
-
-input[type="submit"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    filter: brightness(1.1);
-}
-
-input[type="submit"]:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 6px rgba(99, 102, 241, 0.3);
-}
-
-/* ==========================================================================
-   6. RESPONSIVIDADE (TELAS MENORES)
-   ========================================================================== */
-@media (max-width: 480px) {
-    #contatos {
-        padding: 24px;
-        gap: 20px;
-    }
-
-    #contatos > div {
-        grid-template-columns: 1fr; /* Radio buttons ficam empilhados no mobile */
-        gap: 12px;
-    }
-    
-    label[for="mensagem"] {
-        margin-bottom: -10px;
-    }
-}

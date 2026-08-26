@@ -1,45 +1,35 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+    <meta charset="UTF-8"> 
     <title>Contato</title>
-</head>
-<body>
-    <main id="contatos">
-        <!-- O formulário precisa de um método (geralmente POST) e para onde enviar (action) -->
-        <form action="#" method="POST">
+    <link rel="stylesheet" href="style.css"> <!-- Seu arquivo CSS -->
+</head> 
+<body> 
+    <main id="contatos"> 
+        <!-- O formulário agora envolve os elementos e aplica o alinhamento correto -->
+        <form action="#" method="POST" class="form-container">
             
             <!-- Campo de Mensagem -->
-            <div>
-                <label for="mensagem">Mensagem:</label>
-                <textarea cols="70" rows="10" id="mensagem" name="mensagem" class="input" required></textarea>
+            <div class="campo-grupo">
+                <label for="mensagem">Mensagem:</label> 
+                <textarea cols="70" rows="10" id="mensagem" name="mensagem" class="input" required></textarea> 
             </div>
 
-            <!-- Opções de Contato (Melhorado para acessibilidade) -->
-            <fieldset>
-                <legend>Como prefere o contato?</legend>
-                
-                <label for="radio-email">
-                    <input type="radio" name="meio_contato" value="email" id="radio-email" checked>
-                    E-mail
-                </label>
-                
-                <label for="radio-telefone">
-                    <input type="radio" name="meio_contato" value="telefone" id="radio-telefone">
-                    Telefone
-                </label>
-                
-                <label for="radio-whatsapp">
-                    <input type="radio" name="meio_contato" value="whatsapp" id="radio-whatsapp">
-                    WhatsApp
-                </label>
-            </fieldset>
+            <!-- Opções de Contato (Radio Buttons) --> 
+            <div class="opcoes-contato"> 
+                <label for="radio-telefone"> 
+                    <input type="radio" name="contato" value="telefone" id="radio-telefone"> Telefone 
+                </label> 
+                <label for="radio-whatsapp"> 
+                    <input type="radio" name="contato" value="whatsapp" id="radio-whatsapp"> WhatsApp 
+                </label> 
+            </div> 
 
-            <!-- Botão de Enviar -->
-            <button type="submit">Enviar Formulário</button>
-            
+            <!-- Botão de Enviar --> 
+            <input type="submit" value="Enviar Formulário"> 
         </form>
-    </main>
-</body>
+    </main> 
+</body> 
 </html>
 
