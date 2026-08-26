@@ -1,57 +1,164 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia Alura</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="caixa">
-            <img src="logo.png"  class="logo-topo"  alt="Logo da Barbearia Alura com uma barba">
-            <nav class="menu-principal">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="caixa">
-        <section class="conteudo-principal">
-            <h2>Bem-vindo ao nosso site</h2>
-            <p class="texto-destaque">Este é um texto em destaque com tamanho menor e negrito.</p>
-            <p>Aqui você pode incluir o restante do conteúdo da sua página.</p>
-        </section>
-        <ul class="produtos caixa">
-            <li>
-                <h2>Cabelo</h2>
-                <img src="cabelo.jpg" alt="imagem de cabelo um corte de cabelo">
-                <p class="produtos-descricao">Na tesoura ou na máquina, como você preferir.</p>
-                <p class="produtos-preco">R$ 30,00</p>
-            </li>
-            <li>
-                <h2>Barba</h2>
-                <img src="barba.jpg" alt="imagem de uma barba com bigode">
-                <p class="produtos-descricao">Corte e desenho profissional para sua barba.</p>
-                <p class="produtos-preco">R$ 25,00</p>
-            </li>
-            <li>
-                <h2>Cabelo + Barba</h2>
-                <img src="cabelo+barba.jpg" alt="imagem de um cabelo e barba com bigode">
-                <p class="produtos-descricao">O pacote completo para o seu visual.</p>
-                <p class="produtos-preco">R$ 50,00</p>
-            </li>
-        </ul>
-    </main>
-    <footer>
-        <div class="caixa">
-            <img src="logo.png" alt="Logo da Barbearia Alura com uma barba" class="logo-rodape">
-            <p class="copyright">&copy; Copyright Barbearia Alura - 2026</p>
-        </div>
-    </footer
-</body>
-</html>
+/* Configurações Gerais do Site */ 
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    background: #121212; /* Fundo geral preto escuro */
+    margin: 0; 
+    padding: 0; 
+    color: #E0E0E0; /* Texto claro para leitura confortável */
+} 
 
+/* Estrutura de Cabeçalho e Rodapé */
+header {
+    background: #000000; /* Preto puro para destacar o topo */
+    padding: 20px 0;
+}
+
+footer {
+    background: #000000; /* Preto puro no rodapé */
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.caixa {
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Menu de Navegação */
+.menu-principal ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-principal li {
+    margin-left: 20px;
+}
+
+.menu-principal a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.menu-principal a:hover {
+    color: #FFC107; /* Destaque dourado ao passar o mouse */
+}
+
+/* Conteúdo Principal */
+main.caixa {
+    display: block; /* Garante empilhamento correto dos blocos */
+    margin-top: 30px;
+}
+
+.conteudo-principal {
+    background: #1E1E1E; /* Cartão grafite escuro */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #BBBBBB;
+}
+
+.texto-destaque {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #FFC107; /* Texto de destaque em dourado */
+    margin-bottom: 15px;
+}
+
+/* Lista de Produtos */
+.produtos {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.produtos li {
+    background: #1E1E1E; /* Fundo escuro para cada produto */
+    width: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 2px solid #252525;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.produtos li:hover {
+    border-color: #FFC107; /* Borda dourada no hover */
+    transform: scale(1.03); /* Leve efeito de crescimento */
+}
+
+.produtos img {
+    width: 100%;
+    border-radius: 5px;
+    opacity: 0.8; /* Suaviza fotos brilhantes no tema escuro */
+}
+
+.produtos-descricao {
+    font-size: 1em;
+    margin: 15px 0;
+}
+
+.produtos-preco {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+/* Formulário de Contato */
+label {
+    display: block;
+    font-size: 1.1em;
+    color: #FFFFFF;
+    margin: 15px 0 5px 0;
+}
+
+.input-padrao {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    background: #252525; /* Fundo escuro para os inputs */
+    color: #FFFFFF; /* Texto digitado em branco */
+    border: 1px solid #444444;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-padrao:focus {
+    border-color: #FFC107; /* Borda dourada ao clicar no input */
+}
+
+.copyright {
+    color: #666666;
+    font-size: 0.9em;
+    margin-top: 15px;
+}
