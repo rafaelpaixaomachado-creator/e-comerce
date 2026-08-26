@@ -6,23 +6,40 @@
 </head>
 <body>
     <main id="contatos">
-        <!-- Campo de Mensagem -->
-        <label for="mensagem">Mensagem:</label>
-        <textarea cols="70" rows="10" id="mensagem" class="input"></textarea>
-
-        <!-- Opções de Contato (Radio Buttons) -->
-        <div>
-            <label for="radio-telefone">
-                <input type="radio" name="contato" value="telefone" id="radio-telefone"> Telefone
-            </label>
+        <!-- O formulário precisa de um método (geralmente POST) e para onde enviar (action) -->
+        <form action="#" method="POST">
             
-            <label for="radio-whatsapp">
-                <input type="radio" name="contato" value="whatsapp" id="radio-whatsapp"> WhatsApp
-            </label>
-        </div>
+            <!-- Campo de Mensagem -->
+            <div>
+                <label for="mensagem">Mensagem:</label>
+                <textarea cols="70" rows="10" id="mensagem" name="mensagem" class="input" required></textarea>
+            </div>
 
-        <!-- Botão de Enviar -->
-        <input type="submit" value="Enviar Formulário">
+            <!-- Opções de Contato (Melhorado para acessibilidade) -->
+            <fieldset>
+                <legend>Como prefere o contato?</legend>
+                
+                <label for="radio-email">
+                    <input type="radio" name="meio_contato" value="email" id="radio-email" checked>
+                    E-mail
+                </label>
+                
+                <label for="radio-telefone">
+                    <input type="radio" name="meio_contato" value="telefone" id="radio-telefone">
+                    Telefone
+                </label>
+                
+                <label for="radio-whatsapp">
+                    <input type="radio" name="meio_contato" value="whatsapp" id="radio-whatsapp">
+                    WhatsApp
+                </label>
+            </fieldset>
+
+            <!-- Botão de Enviar -->
+            <button type="submit">Enviar Formulário</button>
+            
+        </form>
     </main>
 </body>
 </html>
+
