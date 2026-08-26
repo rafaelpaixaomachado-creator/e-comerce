@@ -1,20 +1,28 @@
-<html>
-  <body>
-    
-  </body>
-  <main id="contatos"> 
-   <label for="mensagem":mensagem></label>
-   <textarea cols="70" rows="10" id="mensagem"  class="input> </textarea>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+</head>
+<body>
+    <main id="contatos">
+        <!-- Campo de Mensagem -->
+        <label for="mensagem">Mensagem:</label>
+        <textarea cols="70" rows="10" id="mensagem" class="input"></textarea>
 
- <div>
-  <label for="radio-telefone">
+        <!-- Opções de Contato (Radio Buttons) -->
+        <div>
+            <label for="radio-telefone">
+                <input type="radio" name="contato" value="telefone" id="radio-telefone"> Telefone
+            </label>
+            
+            <label for="radio-whatsapp">
+                <input type="radio" name="contato" value="whatsapp" id="radio-whatsapp"> WhatsApp
+            </label>
+        </div>
 
-  <input type="radio" nome="contato" value="telefone" id="radio-telefone " </label>
-
-   <label for="radio-whatsapp"></label>
-   <input type="radio" nome="contatos" value="whatsapp" id="radio-whatsapp</label>
-  </div>
-<input type="submit" values "envier" formulario">
-
-
+        <!-- Botão de Enviar -->
+        <input type="submit" value="Enviar Formulário">
+    </main>
+</body>
 </html>
