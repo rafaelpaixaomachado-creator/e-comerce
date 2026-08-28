@@ -1,99 +1,99 @@
-/* ==========================================================================
-   2. CONTAINER PRINCIPAL (CARD ALTERADO PARA CENTRALIZAR)
+//* ========================================================================== 
+   2. CONTAINER PRINCIPAL (CARD ALTERADO PARA CENTRALIZAR) 
+   ========================================================================== */ 
+#contatos { 
+  width: 100%; 
+  max-width: 600px; 
+  background: var(--card-bg); 
+  backdrop-filter: blur(16px); 
+  -webkit-backdrop-filter: blur(16px); 
+  border: 1px solid var(--border-color); 
+  border-radius: 24px; 
+  padding: 40px; 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1); 
+  position: relative; 
+} 
+
+/* Nova classe que centraliza todo o conteúdo do formulário verticalmente */ 
+.form-container { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; /* Centraliza horizontalmente todos os filhos */ 
+  gap: 28px; 
+  width: 100%; 
+} 
+
+/* ========================================================================== 
+   3. ELEMENTOS DE TEXTO E CAMPO DE MENSAGEM 
+   ========================================================================== */ 
+.campo-grupo { 
+  width: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; /* Centraliza o texto "Mensagem" acima da caixa */ 
+  gap: 12px; 
+} 
+
+label[for="mensagem"] { 
+  font-size: 0.9rem; 
+  font-weight: 600; 
+  letter-spacing: 0.5px; 
+  text-transform: uppercase; 
+  color: var(--text-muted); 
+  display: block; 
+  text-align: center; /* Garante que o texto fique centralizado */ 
+} 
+
+#mensagem { 
+  width: 100%; 
+  min-height: 150px; 
+  background: rgba(15, 23, 42, 0.6); 
+  border: 2px solid var(--border-color); 
+  border-radius: 12px; 
+  padding: 16px; 
+  color: var(--text-main); 
+  font-size: 1rem; 
+  line-height: 1.6; 
+  resize: vertical; 
+  outline: none; 
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast); 
+} 
+
+/* Estado de Preenchimento / Foco Ativo */ 
+#mensagem:focus { 
+  background: rgba(15, 23, 42, 0.8); 
+  border-color: var(--accent-primary); 
+  box-shadow: 0 0 0 4px var(--accent-glow), 0 8px 20px rgba(0, 0, 0, 0.2); 
+} 
+
+/* ========================================================================== 
+   4. SELEÇÃO DE CONTATO (RADIO BUTTONS CUSTOMIZADOS) 
+   ========================================================================== */ 
+.opcoes-contato { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 16px; 
+  margin-top: 4px; 
+  width: 100%; /* Ocupa a largura total do container pai */ 
+} 
+
+/* ========================================================================== 
+   5. BOTÃO ENVIAR (CORRIGIDO) 
    ========================================================================== */
-#contatos {
-    width: 100%;
-    max-width: 600px;
-    background: var(--card-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--border-color);
-    border-radius: 24px;
-    padding: 40px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    position: relative;
-}
+.enviar { 
+  width: 40%; 
+  padding: 15px 0; 
+  background-color: bisque; 
+  color: #8b5a2b; /* Alterado para contraste: blanchedalmond ficava invisível em fundo bisque */
+  font-weight: bold; 
+  font-size: 14px; /* Aumentado de 10px para melhor legibilidade */
+  border: none; 
+  border-radius: 5px; 
+  transition: all var(--transition-fast, 0.2s) ease; /* Corrigido de 'is all' para a sintaxe padrão do CSS */
+  cursor: pointer; 
+} 
 
-/* Nova classe que centraliza todo o conteúdo do formulário verticalmente */
-.form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente todos os filhos */
-    gap: 28px;
-    width: 100%;
-}
-
-/* ==========================================================================
-   3. ELEMENTOS DE TEXTO E CAMPO DE MENSAGEM
-   ========================================================================== */
-.campo-grupo {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza o texto "Mensagem" acima da caixa */
-    gap: 12px;
-}
-
-label[for="mensagem"] {
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    display: block;
-    text-align: center; /* Garante que o texto fique centralizado */
-}
-
-#mensagem {
-    width: 100%;
-    min-height: 150px;
-    background: rgba(15, 23, 42, 0.6);
-    border: 2px solid var(--border-color);
-    border-radius: 12px;
-    padding: 16px;
-    color: var(--text-main);
-    font-size: 1rem;
-    line-height: 1.6;
-    resize: vertical;
-    outline: none;
-    transition: border-color var(--transition-fast), 
-                box-shadow var(--transition-fast),
-                background-color var(--transition-fast);
-}
-
-/* Estado de Preenchimento / Foco Ativo */
-#mensagem:focus {
-    background: rgba(15, 23, 42, 0.8);
-    border-color: var(--accent-primary);
-    box-shadow: 0 0 0 4px var(--accent-glow),
-                0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* ==========================================================================
-   4. SELEÇÃO DE CONTATO (RADIO BUTTONS CUSTOMIZADOS)
-   ========================================================================== */
-.opcoes-contato {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-top: 4px;
-    width: 100%; /* Ocupa a largura total do container pai */
-}
-.enviar {
- width: 40%;
- padding: 15px 0;
- background-color: bisque;
- color: blanchedalmond;
- font-weight: bold;
- font-size: 10px;
- border: none;
- border-radius: 5px;
- transition: is all;
- cursor: pointer;
-}
-.enviar:houver {
- background-color: bisque;
- transform: scale(1,2);
-
+.enviar:hover { /* Corrigido de ':houver' para ':hover' */
+  background-color: var(--accent-primary, #ffd1a4); /* Altera a cor no hover para feedback visual */
+  transform: scale(1.05); /* Ajustado de (1,2) para (1.05) para não distorcer o botão de forma agressiva */
 }
