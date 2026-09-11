@@ -1,126 +1,93 @@
-/* Configurações Globais */
-body {
-    margin: 0;
+* {
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-/* Estrutura Centralizada */
-.caixa {
-    position: relative;
-    width: 940px;
-    margin: 0 auto;
-}
-
-/* Cabeçalho */
-header {
-    background: #000000;
-    padding: 20px 0;
-}
-
-.logo-topo {
-    /* Adicione regras para o tamanho do logo se necessário */
-    max-height: 80px;
-}
-
-/* Menu de Navegação */
-.menu-principal {
-    position: absolute;
-    top: 55px;
-    right: 0;
-}
-
-.menu-principal ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-principal li {
-    display: inline;
-    margin-left: 30px;
-}
-
-.menu-principal a {
-    text-transform: uppercase;
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.menu-principal a:hover {
-    color: #C78C19;
-    text-decoration: underline;
-}
-
-/* Conteúdo Principal */
-.conteudo-principal {
-    padding: 40px 0;
-}
-
-.texto-destaque {
-    font-size: 12px;
-    font-weight: bold;
-}
-
-/* Organização das Imagens e Lado a Lado */
-.imagens-projeto {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 30px;
-}
-
-.imagem-item {
-    width: 48%;
-}
-
-.imagem-item img {
-    width: 100%;
-    height: auto;
-}
-
-/* Lista de Serviços */
-.lista-servicos {
-    margin-top: 15px;
-    padding-left: 20px;
-}
-
-.lista-servicos li {
-    margin-bottom: 8px;
-    font-size: 16px;
-}
-/* Configuração do fundo preto do site */
 body {
-    background: #000000;
+    background: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
 }
 
-/* Estilização do rodapé branco */
-footer {
-    background: #FFFFFF;
-    padding: 40px 0;
+#contatos {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
     text-align: center;
-}
-
-.logo-rodape {
-    max-width: 150px;
+    color: #333;
     margin-bottom: 20px;
 }
 
-.copyright {
-    color: #000000;
-    font-size: 13px;
-    margin-top: 20px;
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-form label {
-    display: block;
 
-    font-size: 20px;
-    margin: 0 0 10px;
+label {
+    font-weight: bold;
+    color: #444;
+    margin-top: 8px;
 }
-form input {
- display: block;
- margin: 0 0 20px;
- padding: 10px 25px;
- width: 50%;
+
+.input-padrao {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.input-padrao:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74,144,226,0.5);
+}
+
+.opcoes-contato {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-top: 10px;
+}
+
+.opcoes-contato legend {
+    font-weight: bold;
+    color: #444;
+    padding: 0 5px;
+}
+
+.opcoes-contato label {
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.botao-enviar {
+    margin-top: 20px;
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.botao-enviar:hover {
+    background: #357ab8;
 }
