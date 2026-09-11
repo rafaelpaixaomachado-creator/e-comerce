@@ -1,165 +1,61 @@
-/* Configurações Gerais do Site */ 
-body { 
-    font-family: 'Montserrat', sans-serif; 
-    background: #121212; /* Fundo geral preto escuro */
-    margin: 0; 
-    padding: 0; 
-    color: #E0E0E0; /* Texto claro para leitura confortável */
-} 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="contatos">
+        <h1>Entre em Contato</h1>
+        
+        <form action="#" method="POST" class="form-container">
+            
+            <!-- Nome e Sobrenome -->
+            <label for="nome">Nome e Sobrenome:</label>
+            <input class="input-padrao" type="text" id="nome" name="nome" 
+                   required placeholder="Digite seu nome completo">
 
-/* Estrutura de Cabeçalho e Rodapé */
-header {
-    background: #000000; /* Preto puro para destacar o topo */
-    padding: 20px 0;
-}
+            <!-- E-mail -->
+            <label for="email">E-mail:</label>
+            <input class="input-padrao" type="email" id="email" name="email" 
+                   required placeholder="seuemail@dominio.com">
 
-footer {
-    background: #000000; /* Preto puro no rodapé */
-    padding: 40px 0;
-    text-align: center;
-    margin-top: 40px;
-}
+            <!-- Telefone -->
+            <label for="telefone">Telefone:</label>
+            <input class="input-padrao" type="tel" id="telefone" name="telefone" 
+                   placeholder="(00) 00000-0000">
 
-.caixa {
-    max-width: 940px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+            <!-- Campo de Mensagem -->
+            <label for="mensagem">Mensagem:</label>
+            <textarea class="input-padrao" id="mensagem" name="mensagem" 
+                      rows="5" required placeholder="Escreva sua mensagem..."></textarea>
 
-/* Menu de Navegação */
-.menu-principal ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+            <!-- Opções de Contato (Radio Buttons) -->
+            <fieldset class="opcoes-contato">
+                <legend>Como prefere ser contatado?</legend>
+                
+                <input type="radio" id="radio-email" name="preferencia-contato" value="email" checked>
+                <label for="radio-email">E-mail</label>
+                
+                <input type="radio" id="radio-telefone" name="preferencia-contato" value="telefone">
+                <label for="radio-telefone">Telefone</label>
+                
+                <input type="radio" id="radio-whatsapp" name="preferencia-contato" value="whatsapp">
+                <label for="radio-whatsapp">WhatsApp</label>
+            </fieldset>
 
-.menu-principal li {
-    margin-left: 20px;
-}
+            <!-- Checkbox de Novidades -->
+            <div class="checkbox-container">
+                <input type="checkbox" id="novidades" name="novidades" value="sim">
+                <label for="novidades">Desejo receber novidades por e-mail</label>
+            </div>
 
-.menu-principal a {
-    color: #FFFFFF;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: color 0.3s;
-}
+            <!-- Botão de Envio -->
+            <button type="submit" class="botao-enviar">Enviar Mensagem</button>
 
-.menu-principal a:hover {
-    color: #FFC107; /* Destaque dourado ao passar o mouse */
-}
-
-/* Conteúdo Principal */
-main.caixa {
-    display: block; /* Garante empilhamento correto dos blocos */
-    margin-top: 30px;
-}
-
-.conteudo-principal {
-    background: #1E1E1E; /* Cartão grafite escuro */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-h2 {
-    font-size: 2em;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #BBBBBB;
-}
-
-.texto-destaque {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #FFC107; /* Texto de destaque em dourado */
-    margin-bottom: 15px;
-}
-
-/* Lista de Produtos */
-.produtos {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0;
-}
-
-.produtos li {
-    background: #1E1E1E; /* Fundo escuro para cada produto */
-    width: 30%;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    border: 2px solid #252525;
-    text-align: center;
-    transition: transform 0.3s, border-color 0.3s;
-}
-
-.produtos li:hover {
-    border-color: #FFC107; /* Borda dourada no hover */
-    transform: scale(1.03); /* Leve efeito de crescimento */
-}
-
-.produtos img {
-    width: 100%;
-    border-radius: 5px;
-    opacity: 0.8; /* Suaviza fotos brilhantes no tema escuro */
-}
-
-.produtos-descricao {
-    font-size: 1em;
-    margin: 15px 0;
-}
-
-.produtos-preco {
-    font-size: 1.4em;
-    font-weight: bold;
-    color: #FFFFFF;
-    margin-top: 10px;
-}
-
-/* Formulário de Contato */
-label {
-    display: block;
-    font-size: 1.1em;
-    color: #FFFFFF;
-    margin: 15px 0 5px 0;
-}
-
-.input-padrao {
-    display: block;
-    width: 100%;
-    max-width: 500px;
-    background: #252525; /* Fundo escuro para os inputs */
-    color: #FFFFFF; /* Texto digitado em branco */
-    border: 1px solid #444444;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 1em;
-    box-sizing: border-box;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-.input-padrao:focus {
-    border-color: #FFC107; /* Borda dourada ao clicar no input */
-}
-
-.copyright {
-    color: #666666;
-    font-size: 0.9em;
-    margin-top: 15px;
-}
-
+        </form>
+    </main>
+</body>
+</html>
