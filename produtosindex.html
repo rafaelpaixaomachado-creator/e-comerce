@@ -1,61 +1,143 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset básico para remover margens padrão */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Centraliza tudo na tela */
+        body {
+            background-color: #f0f2f5; /* Cor de fundo cinza claro */
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center;     /* Centraliza verticalmente */
+            min-height: 100vh;       /* Altura total da tela */
+            padding: 20px;
+        }
+
+        /* O Cartão branco onde fica o formulário */
+        .container-contato {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 500px; /* Largura máxima para não esticar demais */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        /* Título (opcional, mas ajuda no layout) */
+        .container-contato h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        /* Estilo dos Labels (Etiquetas) */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Estilo dos Campos de Texto */
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 20px; /* Espaço entre os campos */
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        /* Efeito quando clica no campo */
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* Área do Radio (WhatsApp) */
+        .radio-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 10px;
+            transform: scale(1.2); /* Deixa o radio um pouco maior */
+        }
+
+        .radio-group label {
+            margin-bottom: 0;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        /* Pergunta do Radio */
+        .pergunta-contato {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Botão de Enviar */
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff; /* Azul */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+        }
+    </style>
 </head>
 <body>
-    <main id="contatos">
-        <h1>Entre em Contato</h1>
+
+    <div class="container-contato">
+        <h2>Entre em Contato</h2>
         
-        <form action="#" method="POST" class="form-container">
-            
-            <!-- Nome e Sobrenome -->
-            <label for="nome">Nome e Sobrenome:</label>
-            <input class="input-padrao" type="text" id="nome" name="nome" 
-                   required placeholder="Digite seu nome completo">
+        <form action="#" method="POST">
+            <!-- Campo Email -->
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@dominio.com" required>
 
-            <!-- E-mail -->
-            <label for="email">E-mail:</label>
-            <input class="input-padrao" type="email" id="email" name="email" 
-                   required placeholder="seuemail@dominio.com">
+            <!-- Campo Mensagem -->
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
 
-            <!-- Telefone -->
-            <label for="telefone">Telefone:</label>
-            <input class="input-padrao" type="tel" id="telefone" name="telefone" 
-                   placeholder="(00) 00000-0000">
-
-            <!-- Campo de Mensagem -->
-            <label for="mensagem">Mensagem:</label>
-            <textarea class="input-padrao" id="mensagem" name="mensagem" 
-                      rows="5" required placeholder="Escreva sua mensagem..."></textarea>
-
-            <!-- Opções de Contato (Radio Buttons) -->
-            <fieldset class="opcoes-contato">
-                <legend>Como prefere ser contatado?</legend>
-                
-                <input type="radio" id="radio-email" name="preferencia-contato" value="email" checked>
-                <label for="radio-email">E-mail</label>
-                
-                <input type="radio" id="radio-telefone" name="preferencia-contato" value="telefone">
-                <label for="radio-telefone">Telefone</label>
-                
-                <input type="radio" id="radio-whatsapp" name="preferencia-contato" value="whatsapp">
-                <label for="radio-whatsapp">WhatsApp</label>
-            </fieldset>
-
-            <!-- Checkbox de Novidades -->
-            <div class="checkbox-container">
-                <input type="checkbox" id="novidades" name="novidades" value="sim">
-                <label for="novidades">Desejo receber novidades por e-mail</label>
+            <!-- Opção WhatsApp -->
+            <span class="pergunta-contato">Como prefere o nosso contato?</span>
+            <div class="radio-group">
+                <input type="radio" id="whatsapp" name="tipo_contato" value="whatsapp">
+                <label for="whatsapp">WhatsApp</label>
             </div>
 
-            <!-- Botão de Envio -->
-            <button type="submit" class="botao-enviar">Enviar Mensagem</button>
-
+            <!-- Botão -->
+            <button type="submit">Enviar Formulário</button>
         </form>
-    </main>
+    </div>
+
 </body>
 </html>
