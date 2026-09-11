@@ -2,47 +2,60 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
-    <link rel="stylesheet" href="style.css"> <!-- Seu arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main id="contatos">
-        <!-- O formulário agora envolve os elementos e aplica o alinhamento correto -->
+        <h1>Entre em Contato</h1>
+        
         <form action="#" method="POST" class="form-container">
             
-            <!-- Campo de Mensagem -->
-            
+            <!-- Nome e Sobrenome -->
+            <label for="nome">Nome e Sobrenome:</label>
+            <input class="input-padrao" type="text" id="nome" name="nome" 
+                   required placeholder="Digite seu nome completo">
 
-            <label for="nomresobrenome" nome e sobrenome> </label>
-            <label= for="email">email</label>
-            <input class="input-padrao" type="text"  id="email" required placeholder="seuemail@dominio.com"
-             
+            <!-- E-mail -->
+            <label for="email">E-mail:</label>
+            <input class="input-padrao" type="email" id="email" name="email" 
+                   required placeholder="seuemail@dominio.com">
+
+            <!-- Telefone -->
+            <label for="telefone">Telefone:</label>
+            <input class="input-padrao" type="tel" id="telefone" name="telefone" 
+                   placeholder="(00) 00000-0000">
+
+            <!-- Campo de Mensagem -->
+            <label for="mensagem">Mensagem:</label>
+            <textarea class="input-padrao" id="mensagem" name="mensagem" 
+                      rows="5" required placeholder="Escreva sua mensagem..."></textarea>
 
             <!-- Opções de Contato (Radio Buttons) -->
-            <div class="opcoes-contato">
-                <label for="radio-telefone">
-                    <input="radio" name="contato" value="telefone" id="radio-telefone" required placeholder="(xx) xxxxx-xxxx" Telefone
-                 
+            <fieldset class="opcoes-contato">
+                <legend>Como prefere ser contatado?</legend>
+                
+                <input type="radio" id="radio-email" name="preferencia-contato" value="email" checked>
+                <label for="radio-email">E-mail</label>
+                
+                <input type="radio" id="radio-telefone" name="preferencia-contato" value="telefone">
+                <label for="radio-telefone">Telefone</label>
+                
+                <input type="radio" id="radio-whatsapp" name="preferencia-contato" value="whatsapp">
+                <label for="radio-whatsapp">WhatsApp</label>
+            </fieldset>
 
-                <div class="campo-grupo">
-                <label for="mensagem">Mensagem:</label>
-                <textarea cols="70" rows="10" id="mensagem" name="mensagem" class="input" required></textarea>
+            <!-- Checkbox de Novidades -->
+            <div class="checkbox-container">
+                <input type="checkbox" id="novidades" name="novidades" value="sim">
+                <label for="novidades">Desejo receber novidades por e-mail</label>
             </div>
 
+            <!-- Botão de Envio -->
+            <button type="submit" class="botao-enviar">Enviar Mensagem</button>
 
-                <label for="radio-whatsapp">
-                    <input type="radio" name="contato" value="whatsapp" id="radio-whatsapp"> WhatsApp
-                </label>
-            </div>
-             <p>como prefere o nosso contato?</p>
-             <label for="radio memail"></label>
-
-            <!-- Botão de Enviar --> 
-            <input class="Enviar" submit  value="Enviar Formulário">
-            
         </form>
     </main>
 </body>
 </html>
-
-   
