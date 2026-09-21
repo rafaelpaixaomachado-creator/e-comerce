@@ -149,3 +149,78 @@ body {
         font-size: 24px;
     }
 }
+/* ===== BOTÃO ENVIAR (ESTADOS COMPLEMENTARES) ===== */
+.btn-enviar {
+    /* Garante que o botão tenha uma transição suave para o efeito de levantar */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+    transform: translateY(-2px); /* Efeito de "levantar" */
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3); /* Sombra suave ao pairar */
+}
+
+.btn-enviar:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 86, 179, 0.2);
+}
+
+.btn-enviar:focus-visible {
+    outline: 3px solid #71b1ff;
+    outline-offset: 2px;
+}
+
+/* ===== LINK DE VOLTAR ===== */
+.link-voltar {
+    display: inline-block; /* Melhor para controle de clique e margens */
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.link-voltar:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.link-voltar:focus-visible {
+    outline: 2px dashed #007bff;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* ===== RESPONSIVIDADE (CELULAR) ===== */
+@media (max-width: 480px) {
+    body {
+        padding: 0; /* Remove margens externas no mobile para aproveitar a tela */
+        background: #fff; /* Iguala o fundo ao container para parecer uma página única */
+    }
+
+    .contato-container {
+        padding: 20px 16px;
+        border-radius: 0; /* Remove bordas arredondadas no celular */
+        box-shadow: none; /* Remove sombra no celular */
+        max-width: 100%;
+    }
+
+    .contato-header h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    /* Melhora o espaçamento dos inputs no celular para telas de toque */
+    .input-padrao {
+        padding: 12px; 
+        font-size: 16px; /* Evita que o iOS dê zoom automático indesejado nos campos */
+    }
+
+    .btn-enviar {
+        padding: 14px; /* Botão ligeiramente maior no celular para facilitar o clique */
+    }
+}
